@@ -1,7 +1,7 @@
 import "./index";
 
 useTests("Integrations", () => {
-  useTests("   Counter", () => {
+  useTests("Counter", () => {
     const Counter = () => {
       const _ = Make({ count: 0 });
       const spacing = 5;
@@ -17,7 +17,7 @@ useTests("Integrations", () => {
 
     document.body.append(<Counter />);
   });
-  useTests("   Todo List", () => {
+  useTests("Todo List", () => {
     const TodoList = () => {
       const todos = Make([
         Make({ title: "Walk dog", isComplete: false }),
