@@ -1,3 +1,6 @@
+let _id = 1;
+window.useId = () => _id++;
+
 window.asArray = (_) => {
   if (Array.isArray(_)) return _;
   else if (_ !== undefined) return [_];
