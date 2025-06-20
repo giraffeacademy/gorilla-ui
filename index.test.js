@@ -1,0 +1,9 @@
+import "t-rex-test";
+import "./index";
+import "./src/utils/utils.test";
+import "./src/engine/engine.test";
+import "./src/type/type.test";
+import "./src/effect/effect.test";
+import "./src/style/style.test";
+import "./src/dom/dom.test";
+import "./index.test.jsx";

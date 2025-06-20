@@ -1,0 +1,26 @@
+{
+  "name": "gorilla-ui",
+  "version": "1.0.2",
+  "description": "A simple UI library for the web featuring a custom styling language and full reactivity",
+  "main": "index.js",
+  "scripts": {
+    "test": "vite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giraffeacademy/gorilla-ui.git"
+  },
+  "author": "giraffeacademy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giraffeacademy/gorilla-ui/issues"
+  },
+  "homepage": "https://github.com/giraffeacademy/gorilla-ui#readme",
+  "dependencies": {
+    "panda-parse": "^1.0.2"
+  },
+  "devDependencies": {
+    "t-rex-test": "^1.0.0",
+    "vite": "^6.3.5"
+  }
+}
