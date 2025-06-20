@@ -129,7 +129,19 @@ Let’s walk through how to build a simple reactive counter using Gorilla UI.
 
 ## Step 0: Installation
 
-To install Gorilla UI use
+To install Gorilla UI use npm or your preferred package manager:
+
+```
+npm install gorilla-ui
+```
+
+Then simply import it into whatever file you're using
+
+```
+import "gorilla-ui
+```
+
+Note that Gorilla UI adds several fields and variables to the global window, this is part of it's design philosophy around ease of use and allows for a native like feel.
 
 ## Step 1: Create Reactive State with `Make`
 
