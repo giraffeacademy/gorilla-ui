@@ -1,4 +1,4 @@
-# Gorilla UI
+# 🦍 Gorilla UI 🦍
 
 **Gorilla UI** is a lightweight, expressive UI framework for the modern web. It lets you build interfaces with just JavaScript and JSX — no build tools or virtual DOMs required. It’s reactive, declarative, and directly manipulates real DOM elements.
 
