@@ -809,7 +809,7 @@ The animation string defines a timeline of style changes. There are three suppor
 ### 1. To-only animation
 
 ```js
-a = "1s ease-in |to| w:100px bg:salmon";
+a="1s ease-in |to| w:100px bg:salmon"
 ```
 
 Applies a transition from current state **to** the specified values over 1 second.
@@ -817,7 +817,7 @@ Applies a transition from current state **to** the specified values over 1 secon
 ### 2. From-to animation
 
 ```js
-a = "0.5s linear |from| w:0px bg:gray |to| w:200px bg:black";
+a="0.5s linear |from| w:0px bg:gray |to| w:200px bg:black"
 ```
 
 Starts with specific styles and transitions to new values. You can use `from` and `to` sections together.
@@ -825,7 +825,7 @@ Starts with specific styles and transitions to new values. You can use `from` an
 ### 3. Percent-based keyframes
 
 ```js
-a = "1s ease-in-out |0%| o:0 |50%| o:1 |100%| o:0";
+a="1s ease-in-out |0%| o:0 |50%| o:1 |100%| o:0"
 ```
 
 Manually define keyframes at given percentages (just like CSS `@keyframes`). Useful for blinking, pulsing, or complex animations.
