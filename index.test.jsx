@@ -1,13 +1,15 @@
 import "./index";
 
 useTests("Integrations", () => {
-  useTests("Counter", () => {
+  useTests("  Counter", () => {
     const Counter = () => {
       const _ = Make({ count: 0 });
       const spacing = 5;
       return (
         <counter s="flex a:center ">
-          <display s="mr:.25em">{() => _.count}</display>
+          <display a="1s ease-in |to| w:100px bg:salmon" s="mr:.25em">
+            {() => _.count}
+          </display>
           <button s="bg:salmon r:.25em fc:white" onclick={() => _.count++}>
             +1
           </button>
@@ -17,7 +19,7 @@ useTests("Integrations", () => {
 
     document.body.append(<Counter />);
   });
-  useTests("Todo List", () => {
+  useTests("   Todo List", () => {
     const TodoList = () => {
       const todos = Make([
         Make({ title: "Walk dog", isComplete: false }),

@@ -628,7 +628,7 @@ class $ATTRIBUTE_STYLE extends $STYLE_AST {
     this.fieldNames.forEach((shortNameExp) => {
       const shortName = shortNameExp.text;
       const cssName = ABBREVIATIONS[shortName];
-      result += `${cssName}: ${value.trim()}\n`;
+      result += `${cssName}: ${value.trim()};\n`;
     });
     return result;
   }
@@ -705,8 +705,9 @@ class $ANIMATION extends $STYLE_AST {
   }
 
   toJS() {
+    console.log(this.attributes);
     return (
-      this.attributes.reduce((acc, attr) => acc + attr.toJS(), "") +
+      this.attributes.reduce((acc, attr) => acc + " " + attr.toJS(), "") +
       "\n" +
       this.steps.reduce((acc, step) => acc + step.toJS() + "\n", "")
     );
