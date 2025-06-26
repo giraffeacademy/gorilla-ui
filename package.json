@@ -1,6 +1,6 @@
 {
   "name": "gorilla-ui",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A simple UI library for the web featuring a custom styling language and full reactivity",
   "main": "index.js",
   "scripts": {
