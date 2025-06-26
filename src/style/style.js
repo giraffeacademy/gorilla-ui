@@ -156,8 +156,8 @@ class $STYLE_AST extends $AST {
   toJS() {
     let result = ``;
     this.contentExps.forEach((exp) => {
-      if (exp.toJS) result += `${exp.toJS().trim()};\n`;
-      else result += `${exp.text.trim()};\n`;
+      if (exp.toJS) result += `   ${exp.toJS().trim()}\n`;
+      else result += `    ${exp.text.trim()}\n`;
     });
     return result;
   }
@@ -360,7 +360,7 @@ class $IDENTIFIER_STYLE extends $STYLE_AST {
     if (this.text.startsWith("--")) return `var(${this.text})`;
     if (SHORTHANDS[this.text.trim()]) {
       const [attrName, value] = SHORTHANDS[this.text.trim()];
-      return `${attrName}: ${value}`;
+      return `${attrName}: ${value};`;
     }
     return this.text;
   }
@@ -705,9 +705,8 @@ class $ANIMATION extends $STYLE_AST {
   }
 
   toJS() {
-    console.log(this.attributes);
     return (
-      this.attributes.reduce((acc, attr) => acc + " " + attr.toJS(), "") +
+      this.attributes.reduce((acc, attr) => acc + attr.toJS() + " ", "") +
       "\n" +
       this.steps.reduce((acc, step) => acc + step.toJS() + "\n", "")
     );
@@ -794,14 +793,14 @@ Object.defineProperty(HTMLStyleElement.prototype, "addDynamicAnimation", {
         return `
 @media (${attribute}: ${value}){
   .${className} {
-animation: ${animationName} ${animationAST.toJS().split("\n")[0]};
+  animation: ${animationName} ${animationAST.toJS().split("\n")[0]};
   }
 }
 ${endDelimeter}`;
       } else
         return `
 .${className} {
-animation: ${animationName} ${animationAST.toJS().split("\n")[0]};
+  animation: ${animationName} ${animationAST.toJS().split("\n")[0]};
 }
 ${endDelimeter}
 `;
