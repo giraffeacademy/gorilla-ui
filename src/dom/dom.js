@@ -268,7 +268,7 @@ Object.defineProperty(Element.prototype, "addProps", {
             className = _className;
             ANIMATION_CACHE[cacheKey] = className;
           }
-          this.classList.add(className);
+          this.classList.add(className.split(":")[0]);
         });
 
         return;

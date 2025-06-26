@@ -7,7 +7,7 @@ useTests("Integrations", () => {
       const spacing = 5;
       return (
         <counter s="flex a:center ">
-          <display a="1s ease-in |to| w:100px bg:salmon" s="mr:.25em">
+          <display _a="0.3s |to| bg:gray" s="mr:.25em">
             {() => _.count}
           </display>
           <button s="bg:salmon r:.25em fc:white" onclick={() => _.count++}>
